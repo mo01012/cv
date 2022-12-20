@@ -1,0 +1,98 @@
+:root {
+    --black-color: #19192e;
+    --light-color: #dedde0;
+}
+
+.color-dark {
+    color: var(--black-color);
+}
+
+.color-light {
+    color: var(--light-color);
+}
+
+.float {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+body {
+    padding-bottom: 100px;
+    background-color: var(--black-color);
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    background-color: var(--black-color);
+    width: 55%;
+    height: 75px;
+    right: 0;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    background-color: var(--light-color);
+    width: 55%;
+    height: 75px;
+    left: 0;
+    bottom: 0;
+}
+
+body>header {
+    background-color: var(--light-color);
+    padding-top: calc(75px + 1.5rem);
+}
+
+body>header .personal-photo {
+    border: 25px solid var(--black-color);
+    border-radius: 50%;
+}
+
+p.fs-larg {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+@media screen and (max-width:767px) {
+    header p.fs-larg {
+        text-align: center;
+    }
+    p.fs-larg {
+        padding-top: 2.5rem;
+    }
+}
+
+@media screen and (max-width:575px) {
+    header p.fs-larg {
+        font-size: 50px
+    }
+}
+
+.bor-light {
+    border-bottom: 4px solid var(--light-color);
+    width: fit-content;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+
+p.dot::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--light-color);
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
